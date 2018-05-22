@@ -13,11 +13,14 @@ namespace Ch6_Program1
         {
             Header("05/14/2018", "Ch6_Program8",
             "generate and display 100 random numbers between 1 and 1000");
+            //use the random number generator from Mr. Lynch's notes
             Random numb = new Random();
+            //create all the variables outside the for loop first
             int numOfEvenNum = 0;
             int minValue = 1000;
             int maxValue = 0;
             int range = 0;
+            //counter controlled loop to create 100 random numbers
             for (int i = 0; i < 100; i++)
             {
                 int counter = i + 1;
