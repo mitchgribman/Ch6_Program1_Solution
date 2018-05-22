@@ -15,6 +15,9 @@ namespace Ch6_Program1
             "generate and display 100 random numbers between 1 and 1000");
             Random numb = new Random();
             int numOfEvenNum = 0;
+            int minValue = 1000;
+            int maxValue = 0;
+            int range = 0;
             for (int i = 0; i < 100; i++)
             {
                 int counter = i + 1;
@@ -30,10 +33,15 @@ namespace Ch6_Program1
                 {
                     Console.WriteLine();
                 }
+                minValue = Math.Min(minValue, randomNum);
+                maxValue = Math.Max(maxValue, randomNum);
             }
+            range = maxValue - minValue;
             Console.WriteLine("\nThe number of even numbers is {0}.",
             numOfEvenNum);
-            Console.WriteLine("Hello World");
+            Console.WriteLine("\nThe smallest number is {0}.", minValue);
+            Console.WriteLine("\nThe largest number is {0}.", maxValue);
+            Console.WriteLine("\nThe range is {0}.", range);
             Footer();
         }
             
